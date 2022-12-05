@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2962FF"
+    tools:context=".DirectionsMaps">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="360dp"
+        android:layout_height="470dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/fill_white_blue_map_bg"
+        android:translationZ="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="500dp"
+        android:background="@drawable/rounded_fill_border_light2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/from_s"
+        android:layout_width="330dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fill_white_blue_border"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="From Source"
+        android:minHeight="48dp"
+        android:textColor="#2962FF"
+        android:textColorHint="#737373"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/to_d"
+        android:layout_width="330dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/fill_white_blue_border"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="To Location"
+        android:minHeight="48dp"
+        android:textColor="#2962FF"
+        android:textColorHint="#737373"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/from_s" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/from_s"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/from_icon" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/to_d"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:srcCompat="@drawable/to_icon" />
+
+    <View
+        android:id="@+id/route_view"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/fill_white_blue_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maps" />
+
+    <View
+        android:id="@+id/back_to_dash"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/fill_white_blue_border"
+        app:layout_constraintEnd_toStartOf="@+id/route_view"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maps" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus"
+        android:text="GET ROUTE"
+        android:textColor="#2962FF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/route_view"
+        app:layout_constraintEnd_toEndOf="@+id/route_view"
+        app:layout_constraintStart_toStartOf="@+id/route_view"
+        app:layout_constraintTop_toTopOf="@+id/route_view" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus"
+        android:text="BACK"
+        android:textColor="#2962FF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_to_dash"
+        app:layout_constraintEnd_toEndOf="@+id/back_to_dash"
+        app:layout_constraintStart_toStartOf="@+id/back_to_dash"
+        app:layout_constraintTop_toTopOf="@+id/back_to_dash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

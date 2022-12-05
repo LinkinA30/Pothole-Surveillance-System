@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2962FF">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/rounded_fill_border_light2"
+        app:layout_constraintBottom_toBottomOf="@+id/view8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/address_line2"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fill_white_blue_border"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Pincode"
+        android:minHeight="48dp"
+        android:textColor="#2962FF"
+        android:textColorHint="#737373"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_line1" />
+
+    <AutoCompleteTextView
+        android:id="@+id/address_line1"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/fill_white_blue_border"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="Street, Colony, Area"
+        android:minHeight="48dp"
+        android:textColor="#2962FF"
+        android:textColorHint="#737373"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_image" />
+
+    <ImageView
+        android:id="@+id/feedback_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/report_pothole" />
+
+    <View
+        android:id="@+id/feedback_gallery"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/fill_white_blue_border2"
+        android:translationZ="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/feedback_submit"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fill_white_blue_border2"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/view8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedback_gallery"
+        app:layout_constraintVertical_bias="0.26999998" />
+
+    <View
+        android:id="@+id/detect_location"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/fill_white_blue_border3"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_line2" />
+
+    <View
+        android:id="@+id/feedback_camera"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/fill_white_blue_border2"
+        android:translationZ="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#EDEDED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/detectionpg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback_gallery"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_gallery"
+        app:layout_constraintStart_toStartOf="@+id/feedback_gallery"
+        app:layout_constraintTop_toTopOf="@+id/feedback_gallery"
+        app:layout_constraintVertical_bias="0.110000014"
+        app:srcCompat="@drawable/upload_gallery" />
+
+    <ImageView
+        android:id="@+id/detectionpg2"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/detect_location"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="@+id/detect_location"
+        app:layout_constraintTop_toTopOf="@+id/detect_location"
+        app:srcCompat="@drawable/to_icon" />
+
+    <ImageView
+        android:id="@+id/workinprogresspg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="1dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback_camera"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_camera"
+        app:layout_constraintStart_toStartOf="@+id/feedback_camera"
+        app:layout_constraintTop_toTopOf="@+id/feedback_camera"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/upload_camera2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/arbutus"
+        android:text="GALLERY"
+        android:textColor="#304FFE"
+        android:textSize="12sp"
+        android:translationZ="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_gallery"
+        app:layout_constraintStart_toStartOf="@+id/feedback_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/detectionpg" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/arbutus"
+        android:text="SUBMIT"
+        android:textColor="#304FFE"
+        android:textSize="18sp"
+        android:translationZ="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/feedback_submit"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_submit"
+        app:layout_constraintStart_toStartOf="@+id/feedback_submit"
+        app:layout_constraintTop_toTopOf="@+id/feedback_submit" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arbutus"
+        android:text="Detect your location"
+        android:textColor="#304FFE"
+        android:textSize="17sp"
+        android:translationZ="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/detect_location"
+        app:layout_constraintEnd_toEndOf="@+id/detect_location"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="@+id/detect_location"
+        app:layout_constraintTop_toTopOf="@+id/detect_location"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/arbutus"
+        android:text="CAMERA"
+        android:textColor="#304FFE"
+        android:textSize="12sp"
+        android:translationZ="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/feedback_camera"
+        app:layout_constraintStart_toStartOf="@+id/feedback_camera"
+        app:layout_constraintTop_toBottomOf="@+id/workinprogresspg" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_maps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view8" />
+
+    <View
+        android:id="@+id/Logout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.80"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view8"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <View
+        android:id="@+id/home_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/icon_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view8" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/arbutus"
+        android:text="Report Pothole"
+        android:textColor="#2962FF"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/arbutus"
+        android:text="Upload a photo"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detect_location" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

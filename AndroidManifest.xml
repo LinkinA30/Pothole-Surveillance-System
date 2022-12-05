@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.potholesurveillance">
+
+    <permission
+        android:name="com.example.myapplication.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.myapplication.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/app_logo_pothole"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/app_logo_pothole"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PotholeSurveillance"
+        tools:targetApi="31">
+
+        <meta-data
+            android:name = "com.google.android.geo.API_KEY"
+            android:value="AIzaSyDk97O2HnaTHqt7BSBLTv29RyLqsmdQfYQ"></meta-data>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Register"/>
+        <activity android:name=".DashboardMain" />
+        <activity android:name=".DirectionsMaps"/>
+        <activity android:name=".Detection"/>
+        <activity android:name=".Report"/>
+        <activity android:name=".WorkProgress"/>
+        <activity android:name=".ReportSuccess"/>
+        <activity android:name=".AdminDashboard"/>
+        <activity android:name=".AdminDirections"/>
+        <activity android:name=".AdminUserReports"/>
+    </application>
+
+</manifest>
